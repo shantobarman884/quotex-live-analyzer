@@ -23,7 +23,7 @@ jobs:
           java-version: "17"
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Install SDK packages
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
@@ -53,5 +53,5 @@ jobs:
         with:
           name: quotex-live-analyzer-apk
           path: project/**/build/outputs/apk/debug/*.apk
-          if-no-files-found: error
+          if-no-files-found: platforms tools 
           retention-days: 7
