@@ -48,3 +48,7 @@ jobs:
           path: project/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: tools 
           retention-days: 7
+compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+}
